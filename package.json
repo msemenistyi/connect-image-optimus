@@ -24,5 +24,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/msemenistyi/connect-image-optimus/issues"
+  },
+  "dependencies": {
+    "useragent": "git://github.com/msemenistyi/useragent.git"
   }
 }

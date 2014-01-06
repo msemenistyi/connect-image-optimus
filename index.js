@@ -1,5 +1,1 @@
-module.exports = function(){
-	return function(req, res, next){
-		next();
-	};
-};
+module.exports = require('./lib/image-optimus');
