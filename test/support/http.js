@@ -35,7 +35,11 @@ var EventEmitter = require('events').EventEmitter
 
 module.exports = request;
 
+var not = false;
+
+
 connect.proto.request = function(){
+  not = false;
   return request(this);
 };
 
@@ -69,6 +73,11 @@ methods.forEach(function(method){
   };
 });
 
+Request.prototype.not = function() {
+  not = true;
+  return this;
+};
+
 Request.prototype.set = function(field, val){
   this.header[field] = val;
   return this;
@@ -87,10 +96,15 @@ Request.prototype.request = function(method, path){
 
 Request.prototype.expect = function(body, fn){
   var args = arguments;
+  var self = this;
   this.end(function(res){
     switch (args.length) {
       case 3:
-        res.headers.should.have.property(body.toLowerCase(), args[1]);
+        if (!not){
+          res.headers.should.have.property(body.toLowerCase(), args[1]);
+        } else {
+          res.headers.should.not.have.property(body.toLowerCase());
+        }
         args[2]();
         break;
       default:
