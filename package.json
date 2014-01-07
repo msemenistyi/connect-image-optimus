@@ -4,7 +4,7 @@
   "description": "Middleware for optimal image serving. Switches to webp/jpegxr if possible",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/mocha --reporter dot"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
   },
   "dependencies": {
     "useragent": "git://github.com/msemenistyi/useragent.git"
+  },
+  "devDependencies": {
+    "mocha": "~1.16.2",
+    "should": "~2.1.1",
+    "connect": "~2.12.0"
   }
 }
