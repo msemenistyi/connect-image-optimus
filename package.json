@@ -4,7 +4,7 @@
   "description": "Middleware for optimal image serving. Switches to webp/jpegxr if possible",
   "main": "index.js",
   "scripts": {
-    "test": ".\\node_modules\\.bin\\mocha --reporter dot"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",

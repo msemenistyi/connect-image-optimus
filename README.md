@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/msemenistyi/connect-image-optimus.png)](https://travis-ci.org/msemenistyi/connect-image-optimus)
+
 ## Overview
 Middleware to server image in optimal format. Switches from `.jpg`, `.jpeg` or 
 `.png` to `.webp` or `.jxr` if possible.
@@ -44,7 +46,7 @@ with it, but in order not to include them in dependencies, it is assumed that
 you have connect module install globally.   
 This article describes how to require global modules:
 http://nodejs.org/api/modules.html#modules_loading_from_the_global_folders   
-
+Run `npm test` in order to see test results.
 
 ## License
 
