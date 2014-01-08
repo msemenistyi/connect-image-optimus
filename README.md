@@ -18,6 +18,9 @@ The same check is performed for serving **jpeg-xr** images if possible.
 These are browsers comforting this format:
 - IE 9+
 
+The last change made will be **Vary** header set to **Accept** so that caching
+proxies could distingiuish which content to load for the same requested url.
+
 ##Usage
 
 **Warning**: image-optimus should be used before a middleware that is serving 
@@ -31,12 +34,14 @@ var staticPath = __dirname + '/static/';
 app.use(optimus(staticPath));
 app.use(connect.static(staticPath));
 ```
-
+##Contributing
+Feel free to open issues and send PRs, though make sure that you create tests
+for new functionality and amend ones for fixes and changes. 
 
 ## Running tests
-image-optimus tests depend on connect and express in order to test how it works 
-with them, but in order not to include them in dependencies, it is assumed that 
-you have connect and express modules install globally.   
+image-optimus tests depend on connect in order to test how it works 
+with it, but in order not to include them in dependencies, it is assumed that 
+you have connect module install globally.   
 This article describes how to require global modules:
 http://nodejs.org/api/modules.html#modules_loading_from_the_global_folders   
 
