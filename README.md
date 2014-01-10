@@ -7,17 +7,17 @@ Works with [Connect](https://github.com/senchalabs/connect/)
 and [Express](https://github.com/visionmedia/express).
 
 Image-optimus analyzes **Accept** header of request and searches for `image/webp`.
-If search is successful, fs check for file with the same name but webp extension 
+If search is successful, fs check for file with the same name but .webp extension 
 is performed. In case of existance, url is changed so that other middleware 
 (e.g. static) will serve webp format.   
 If there was no `image/webp` in **Accept** header, module performs a check on 
-**User-Agent** header. These are browsers comforting **webp** format:
+**User-Agent** header. These are browsers supporting **webp** format:
 - Android 4.0+ 
 - Chrome 23.0+
 - Opera 12.1+
 
 The same check is performed for serving **jpeg-xr** images if possible.
-These are browsers comforting this format:
+These are browsers supporting this format:
 - IE 9+
 
 The last change made will be **Vary** header set to **Accept** so that caching
@@ -26,7 +26,7 @@ proxies could distingiuish which content to load for the same requested url.
 ##Usage
 
 **Warning**: image-optimus should be used before a middleware that is serving 
-files so that it will server changed format file.   
+files so that it serves changed format file.   
 
 ```js
 var optimus = require('connect-image-optimus');
@@ -43,16 +43,17 @@ for new functionality and amend ones for fixes and changes.
 ## Running tests
 image-optimus tests depend on connect in order to test how it works 
 with it, but in order not to include them in dependencies, it is assumed that 
-you have connect module install globally.   
+you have connect module install globally.
 This article describes how to require global modules:
-http://nodejs.org/api/modules.html#modules_loading_from_the_global_folders   
+http://nodejs.org/api/modules.html#modules_loading_from_the_global_folders  
+Another way is to install connect locally via runnning `npm install connect`.    
 Run `npm test` in order to see test results.
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Semensityi Mykyta nikeiwe@gmail.com
+Copyright (c) 2014 Semenistyi Mykyta nikeiwe@gmail.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
