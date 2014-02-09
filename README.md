@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/msemenistyi/connect-image-optimus.png)](https://travis-ci.org/msemenistyi/connect-image-optimus)
 
+## Install
+> npm install connect-image-optimus
+
 ## Overview
 Middleware to server image in optimal format. Switches from `.jpg`, `.jpeg` or 
 `.png` to `.webp` or `.jxr` if possible.
