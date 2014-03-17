@@ -27,8 +27,8 @@
     "url": "https://github.com/msemenistyi/connect-image-optimus/issues"
   },
   "dependencies": {
-    "useragent": "git+http://github.com/msemenistyi/useragent.git",
-    "semver": "~2.2.1"
+    "semver": "~2.2.1",
+    "useragent": "~2.0.8"
   },
   "devDependencies": {
     "mocha": "~1.16.2",
