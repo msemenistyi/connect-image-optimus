@@ -84,6 +84,12 @@ describe('connect.image-optimus', function(){
     .expect('Vary', 'Accept', done);
   });
 
+  it('should not do anything if Accept is not present', function(done){
+    app.request()
+    .get('/space.jpg')
+    .expect('Content-Type', 'image/jpeg', done);
+  });
+
 });
 
 describe('connect.image-optimus handle UA string correct.', function(){
@@ -148,6 +154,13 @@ describe('connect.image-optimus handle UA string correct.', function(){
     app.request()
     .set('User-Agent', uaIE11)
     .set('Accept', '*/*')
+    .get('/space.jpg')
+    .expect('Content-Type', 'application/octet-stream', done)
+  });
+
+  it('ie 11: jxr', function(done){
+    app.request()
+    .set('User-Agent', uaIE11)
     .get('/space.jpg')
     .expect('Content-Type', 'application/octet-stream', done)
   });
