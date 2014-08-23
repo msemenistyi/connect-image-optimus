@@ -4,3 +4,4 @@ server/
 coverage/
 *.bmp
 *.exe
+.DS_Store

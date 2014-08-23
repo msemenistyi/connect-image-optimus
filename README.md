@@ -44,12 +44,6 @@ Feel free to open issues and send PRs, though make sure that you create tests
 for new functionality and amend ones for fixes and changes. 
 
 ## Running tests
-image-optimus tests depend on connect in order to test how it works 
-with it, but in order not to include them in dependencies, it is assumed that 
-you have connect module install globally.
-This article describes how to require global modules:
-http://nodejs.org/api/modules.html#modules_loading_from_the_global_folders  
-Another way is to install connect locally via runnning `npm install connect`.    
 Run `npm test` in order to see test results.
 
 ## License

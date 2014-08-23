@@ -1,6 +1,6 @@
 {
   "name": "connect-image-optimus",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "Middleware for optimal image serving. Switches to webp/jpegxr if possible",
   "main": "index.js",
   "scripts": {
@@ -31,6 +31,7 @@
     "useragent": "~2.0.8"
   },
   "devDependencies": {
+    "connect": "~2.25.7",
     "mocha": "~1.16.2",
     "should": "~2.1.1"
   }
