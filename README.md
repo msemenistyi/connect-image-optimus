@@ -15,9 +15,11 @@ is performed. In case of existance, url is changed so that other middleware
 (e.g. static) will serve webp format.   
 If there was no `image/webp` in **Accept** header, module performs a check on 
 **User-Agent** header. These are browsers supporting **webp** format:
-- Android 4.0+ 
+- Android Browser 4.0+ 
 - Chrome 23.0+
-- Opera 12.1+
+- Opera 11.10+
+- Google Chrome (desktop) 17+
+- Google Chrome for Android version 25+
 
 The same check is performed for serving **jpeg-xr** images if possible.
 These are browsers supporting this format:
