@@ -33,6 +33,7 @@
   "devDependencies": {
     "connect": "~2.25.7",
     "mocha": "~1.16.2",
-    "should": "~2.1.1"
+    "express": "~4.9.8",
+    "supertest": "~0.14.0"
   }
 }
